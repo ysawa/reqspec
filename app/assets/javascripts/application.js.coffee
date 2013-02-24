@@ -16,3 +16,7 @@
 #= require twitter/bootstrap
 #= require app
 #= require_tree .
+#= require_self
+
+$ ->
+  window.app = new App(el: $("section#app"))
