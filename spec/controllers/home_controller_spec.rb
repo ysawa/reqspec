@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 require 'spec_helper'
 
 describe HomeController do
@@ -8,5 +10,4 @@ describe HomeController do
       response.should be_success
     end
   end
-
 end
