@@ -64,5 +64,24 @@ module Reqspec
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.generators.stylesheet_engine = :sass
+
+    if Rails.configuration.respond_to?(:sass)
+      Rails.configuration.sass.tap do |config|
+        config.preferred_syntax = :sass
+      end
+    end
+
+    # Version of your assets, change this if you want to expire all your assets
+    config.assets.version = '1.0'
+
+    config.generators do |g|
+      g.test_framework :rspec, fixture: false, views: true, requests: true, routing: true, helpers: true
+      g.fixture_replacement :fabrication, dir: 'spec/fabricators'
+      g.helper false
+      g.stylesheets false
+      g.javascripts false
+    end
   end
 end
