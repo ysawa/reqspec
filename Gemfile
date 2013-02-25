@@ -63,6 +63,7 @@ group :development, :test do
   gem 'spork', '1.0.0rc3'
   gem 'capybara'
   gem 'fabrication'
+  gem 'database_cleaner'
   gem 'rb-fsevent', require: false if RUBY_PLATFORM =~ /darwin/i # mac os x
   gem 'launchy'
   gem 'guard-spork'
@@ -79,6 +80,7 @@ group :development, :test do
     gem 'libnotify'
   when /darwin/i
     gem 'growl'
+    gem 'terminal-notifier-guard'
   when /mswin(?!ce)|mingw|cygwin|bccwin/i
     gem 'rb-notifu'
   end
