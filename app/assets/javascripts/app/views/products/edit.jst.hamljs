@@ -1,0 +1,15 @@
+%h1 Edit Product
+%form.form-horizontal
+  %section.control-group
+    %label.control-label
+      Name
+    %section.controls
+      %input(autofocus="" name="name" required="" type="text" value=product.name)
+  %section.control-group
+    %label.control-label
+      Code
+    %section.controls
+      %input(name="code" required="" type="text" value=product.code)
+  %section.control-group
+    %section.controls
+      %button.btn.btn-primary Save

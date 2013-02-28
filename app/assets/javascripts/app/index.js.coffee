@@ -1,7 +1,8 @@
 #= require json2
-#= require spine
+#= require jquery
+#= require ./spine
 #= require spine/manager
-#= require spine/ajax
+#= require ./spine_mongo
 #= require spine/route
 
 #= require_tree ./lib
@@ -14,9 +15,8 @@ class App extends Spine.Controller
   constructor: ->
     super
 
-    # Initialize controllers:
-    #  @append(@items = new App.Items)
-    #  ...
+    # Initialize controllers
+    @append(@products = new App.Products)
 
     Spine.Route.setup()
 

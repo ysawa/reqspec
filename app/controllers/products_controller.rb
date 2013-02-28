@@ -10,9 +10,15 @@ class ProductsController < ApplicationController
     @product = Product.new(params[:product])
     if @product.save
       flash[:notice] = "Product successfully created"
-      respond_with(@product)
+      respond_with(@product) do |format|
+        format.html { redirect_to @product }
+        format.json { render json: @product, status: :created, location: @product }
+      end
     else
-      render :new
+      respond_with(@product) do |format|
+        format.html { render action: "new" }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+      end
     end
   end
 

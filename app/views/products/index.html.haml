@@ -2,16 +2,16 @@
 
 %table
   %tr
-    %th Name
     %th Code
+    %th Name
     %th
     %th
     %th
 
   - @products.each do |product|
     %tr
-      %td= product.name
       %td= product.code
+      %td= product.name
       %td= link_to 'Show', product
       %td= link_to 'Edit', edit_product_path(product)
       %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }

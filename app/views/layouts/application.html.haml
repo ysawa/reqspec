@@ -14,23 +14,13 @@
           = link_to 'Reqspec', root_path, class: :brand
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "#"
-              %li= link_to "Link 2", "#"
-              %li= link_to "Link 3", "#"
+              %li= link_to "Products", root_path(anchor: "/products")
 
     %section.container
       .row
-        .span9
+        .span12
           = bootstrap_flash
           = yield
-        .span3
-          .well.sidebar-nav
-            %h3 Sidebar
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "#"
-              %li= link_to "Link 2", "#"
-              %li= link_to "Link 3", "#"
 
       %footer
         %p &copy; ysawa lab. 2013
