@@ -80,7 +80,14 @@ class New extends Spine.Controller
 
   submit: (e) ->
     e.preventDefault()
-    product = Product.fromForm(e.target).save()
+    product = Product.fromForm(e.target)
+    product.bind 'save', ->
+      cid = this.cid
+      created = Product.findCID(cid)
+      href_cid = location.href.replace(/.*#\/products\//, '')
+      if created.id != cid and cid == href_cid
+        location.href = "#/products/#{created.id}"
+    product.save()
     @navigate '/products', product.id if product
 
 class Show extends Spine.Controller
