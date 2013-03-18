@@ -1,3 +1,0 @@
-if (typeof console !== 'undefined' && console.log) {
-  function p (o) { <%= Rails.env.development? ? 'console.log(o);' : nil %> }
-}

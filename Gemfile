@@ -17,6 +17,9 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
+  gem 'haml_coffee_assets'
+  gem 'execjs'
+
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -24,8 +27,6 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'rails-behaviors'
 
-
-gem 'spine-rails'
 
 # Optional support for hamljs templates
 gem 'ruby-haml-js'

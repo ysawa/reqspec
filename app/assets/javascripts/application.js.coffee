@@ -12,11 +12,9 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require p
+#= require console_log
 #= require twitter/bootstrap
-#= require app
 #= require_tree .
 #= require_self
 
 $ ->
-  window.app = new App(el: $("section#app"))
