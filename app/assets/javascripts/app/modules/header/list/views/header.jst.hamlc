@@ -5,7 +5,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.brand(href='/') Reqspec
+      %a.brand(href='/#') Reqspec
       .container.nav-collapse
         %ul.nav
 
