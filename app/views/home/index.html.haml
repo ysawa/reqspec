@@ -1,1 +1,12 @@
-%section#app
+#reqspec
+  #header-region
+  .container
+    #main-region
+    #push
+    %footer#footer-region
+
+= content_for :after_javascript do
+  :javascript
+    $(function () {
+      Reqspec.start();
+    })

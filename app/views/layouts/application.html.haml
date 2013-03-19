@@ -2,26 +2,8 @@
 %html(lang="en")
   %head
     = render 'shared/head'
-
   %body
-    %header.navbar.navbar-static-top
-      .navbar-inner
-        .container
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          = link_to 'Reqspec', root_path, class: :brand
-          .container.nav-collapse
-            %ul.nav
-              %li= link_to "Products", root_path(anchor: "/products")
-
-    %section.container
-      .row
-        .span12
-          = bootstrap_flash
-          = yield
-
-      %footer
-        %p &copy; ysawa lab. 2013
+    = yield
     = javascript_include_tag "application"
+    - if content_for? :after_javascript
+      = yield :after_javascript
