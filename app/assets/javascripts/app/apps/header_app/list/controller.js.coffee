@@ -1,4 +1,4 @@
-@Reqspec.module "Header.List", (List, App, Backbone, Marionette, $, _) ->
+@Reqspec.module "HeaderApp.List", (List, App, Backbone, Marionette, $, _) ->
 
   List.Controller =
 

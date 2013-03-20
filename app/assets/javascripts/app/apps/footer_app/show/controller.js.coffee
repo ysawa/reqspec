@@ -1,8 +1,8 @@
-@Reqspec.module "Footer.Show", (Show, App, Backbone, Marionette, $, _) ->
+@Reqspec.module "FooterApp.Show", (Show, App, Backbone, Marionette, $, _) ->
 
   Show.Controller =
 
-    showFooter: ->
+    show: ->
       footerView = @getFooterView()
       App.footerRegion.show footerView
 

@@ -10,6 +10,7 @@
       new Entities.HeaderCollection [
         { name: "Users", url: Routes.root_path(), active: false }
         { name: "Projects", url: Routes.root_path(), active: false }
+        { name: "Products", url: Routes.products_path(), active: false }
         { name: "Requirements", url: Routes.root_path(), active: false }
         { name: "Specs", url: Routes.root_path(), active: false }
       ]

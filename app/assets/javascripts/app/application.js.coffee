@@ -3,7 +3,7 @@
 #= require_self
 #= require_tree ./lib
 #= require_tree ./entities
-#= require_tree ./modules
+#= require_tree ./apps
 #= require_directory .
 
 @Reqspec = do (Backbone, Marionette) ->
@@ -18,7 +18,7 @@
     footerRegion: "#footer-region"
 
   App.addInitializer ->
-    App.module("Header").start()
-    App.module("Footer").start()
+    App.module("HeaderApp").start()
+    App.module("FooterApp").start()
 
   App
