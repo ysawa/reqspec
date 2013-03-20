@@ -1,2 +1,2 @@
-%td= @name
+%td!= @linkTo @name, Routes.product_path(@_id)
 %td= @created_at
