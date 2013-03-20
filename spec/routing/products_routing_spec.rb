@@ -7,6 +7,10 @@ describe ProductsController do
       get("/products").should route_to("products#index")
     end
 
+    it "routes to #index with page" do
+      get("/products/page/1").should route_to("products#index", page: '1')
+    end
+
     it "routes to #new" do
       get("/products/new").should route_to("products#new")
     end
