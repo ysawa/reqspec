@@ -1,33 +1,33 @@
-@Reqspec.module "ProductsApp.List", (List, App, Backbone, Marionette, $, _) ->
+@Reqspec.module "ProductsApp.Index", (Index, App, Backbone, Marionette, $, _) ->
 
-  List.Controller =
+  Index.Controller =
 
-    listProducts: ->
-      App.request "user:entities", (users) =>
+    index: ->
+      App.request "product:entities", (products) =>
 
         @layout = @getLayoutView()
 
         @layout.on "show", =>
-          @showPanel users
-          @showProducts users
+          @showPanel products
+          @showProducts products
 
         App.mainRegion.show @layout
 
-    showPanel: (users) ->
-      panelView = @getPanelView users
+    showPanel: (products) ->
+      panelView = @getPanelView products
       @layout.panelRegion.show panelView
 
-    showProducts: (users) ->
-      usersView = @getProductsView users
-      @layout.usersRegion.show usersView
+    showProducts: (products) ->
+      productsView = @getProductsView products
+      @layout.productsRegion.show productsView
 
-    getProductsView: (users) ->
-      new List.Products
-        collection: users
+    getProductsView: (products) ->
+      new Index.Products
+        collection: products
 
-    getPanelView: (users) ->
-      new List.Panel
-        collection: users
+    getPanelView: (products) ->
+      new Index.Panel
+        collection: products
 
     getLayoutView: ->
-      new List.Layout
+      new Index.Layout

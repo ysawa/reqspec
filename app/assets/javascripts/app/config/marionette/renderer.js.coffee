@@ -1,5 +1,6 @@
 Backbone.Marionette.Renderer.render = (template, data) ->
-  path = JST["app/apps/" + template]
-  unless path
-    throw "Template #{template} not found!"
-  path(data)
+  template_path = "app/apps/" + template
+  renderer = JST[template_path]
+  unless renderer
+    throw "Template #{template_path} not found!"
+  renderer(data)
