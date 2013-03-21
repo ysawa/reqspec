@@ -7,7 +7,7 @@
 
   API =
     index: (page = 1) ->
-      ProductsApp.Index.Controller.index(page)
+      ProductsApp.Index.Controller.index(parseInt(page))
 
   App.addInitializer ->
     new ProductsApp.Router
