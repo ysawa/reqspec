@@ -37,12 +37,14 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    respond_with(@products = Product.all)
+    @products = Product.page(params[:page])
+    respond_with(@products)
   end
 
   # GET /products/new
   def new
-    respond_with(@product = Product.new)
+    @product = Product.new
+    respond_with(@product)
   end
 
   # GET /products/1

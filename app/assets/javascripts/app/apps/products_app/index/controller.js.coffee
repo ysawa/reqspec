@@ -3,7 +3,7 @@
   Index.Controller =
 
     index: ->
-      App.request "product:entities", (products) =>
+      App.request "product:entities", { page: 1 }, (products) =>
 
         @layout = @getLayoutView()
 
