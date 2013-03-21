@@ -2,20 +2,20 @@
 
   Index.Controller =
 
-    index: ->
-      App.request "product:entities", { page: 1 }, (products) =>
+    index: (page = 1) ->
+      App.request "product:entities", { page: page }, (products) =>
 
         @layout = @getLayoutView()
 
         @layout.on "show", =>
-          @showPanel products
+          @showPagination products
           @showProducts products
 
         App.mainRegion.show @layout
 
-    showPanel: (products) ->
-      panelView = @getPanelView products
-      @layout.panelRegion.show panelView
+    showPagination: (products) ->
+      paginationView = @getPaginationView products
+      @layout.paginationRegion.show paginationView
 
     showProducts: (products) ->
       productsView = @getProductsView products
@@ -25,8 +25,8 @@
       new Index.Products
         collection: products
 
-    getPanelView: (products) ->
-      new Index.Panel
+    getPaginationView: (products) ->
+      new Index.Pagination
         collection: products
 
     getLayoutView: ->

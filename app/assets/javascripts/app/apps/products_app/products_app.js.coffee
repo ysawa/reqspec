@@ -3,10 +3,11 @@
   class ProductsApp.Router extends Marionette.AppRouter
     appRoutes:
       "products"  : "index"
+      "products/page/:page"  : "index"
 
   API =
-    index: ->
-      ProductsApp.Index.Controller.index()
+    index: (page = 1) ->
+      ProductsApp.Index.Controller.index(page)
 
   App.addInitializer ->
     new ProductsApp.Router

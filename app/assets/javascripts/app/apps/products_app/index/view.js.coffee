@@ -4,11 +4,11 @@
     template: "products_app/index/templates/layout"
 
     regions:
-      panelRegion: "#panel-region"
+      paginationRegion: "#pagination-region"
       productsRegion: "#products-region"
 
-  class Index.Panel extends App.Views.ItemView
-    template: "products_app/index/templates/_panel"
+  class Index.Pagination extends App.Views.ItemView
+    template: "products_app/index/templates/_pagination"
 
   class Index.Product extends App.Views.ItemView
     template: "products_app/index/templates/_product"

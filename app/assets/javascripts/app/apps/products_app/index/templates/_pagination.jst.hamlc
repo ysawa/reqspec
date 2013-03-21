@@ -1,0 +1,5 @@
+%ul
+  %li
+    != @linkTo 1, '/products/page/1'
+  %li
+    != @linkTo 2, '/products/page/2'
