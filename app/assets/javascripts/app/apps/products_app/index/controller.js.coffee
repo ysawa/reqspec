@@ -8,24 +8,24 @@
         @layout = @getLayoutView()
 
         @layout.on "show", =>
-          @showPagination products
-          @showProducts products
+          @showPagination products, page
+          @showProducts products, page
 
         App.mainRegion.show @layout
 
-    showPagination: (products) ->
-      paginationView = @getPaginationView products
+    showPagination: (products, page) ->
+      paginationView = @getPaginationView products, page
       @layout.paginationRegion.show paginationView
 
-    showProducts: (products) ->
-      productsView = @getProductsView products
+    showProducts: (products, page) ->
+      productsView = @getProductsView products, page
       @layout.productsRegion.show productsView
 
-    getProductsView: (products) ->
+    getProductsView: (products, page) ->
       new Index.Products
         collection: products
 
-    getPaginationView: (products) ->
+    getPaginationView: (products, page) ->
       new Index.Pagination
         collection: products
 

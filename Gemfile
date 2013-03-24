@@ -27,8 +27,9 @@ end
 
 gem 'jquery-rails'
 gem 'haml'
-gem 'rails-behaviors'
 
+gem 'rabl'
+gem 'oj'
 
 # Optional support for hamljs templates
 gem 'ruby-haml-js'

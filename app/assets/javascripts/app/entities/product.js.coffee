@@ -5,6 +5,9 @@
   class Entities.ProductsPager extends Entities.Pager
     model: Entities.Product
     url: -> Routes.products_path()
+    parse: (response) ->
+      results = response.products
+      results
 
   API =
     getProductEntities: (options = {}, callback = null) ->
