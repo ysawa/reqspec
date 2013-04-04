@@ -63,6 +63,12 @@ gem 'kaminari'
 # To use debugger
 # gem 'debugger'
 
+group :test do
+  # Pretty printed test output
+  gem 'turn', require: false
+  gem 'capybara-webkit' if RUBY_PLATFORM =~ /darwin/i # mac os x
+end
+
 group :development, :test do
   gem 'fakeweb'
   gem 'rspec-rails'

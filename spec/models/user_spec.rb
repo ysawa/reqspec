@@ -9,7 +9,9 @@ describe User do
   describe 'Fabricate(:user)' do
     it 'works successfully' do
       user = Fabricate(:user)
+      user.should be_valid
       user.should be_persisted
+      user.should be_confirmed
     end
   end
 end
