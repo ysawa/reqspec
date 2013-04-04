@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'can be initialized' do
+    user = User.new
+    user.should_not be_persisted
+  end
 end
