@@ -2,9 +2,9 @@
 %html(lang="en")
   %head
     = render 'shared/head'
-  %body.welcome
-    %section.container
-      = yield
+  %body
+    = yield
     = javascript_include_tag "application"
+    = javascript_include_tag "app/application"
     - if content_for? :after_javascript
       = yield :after_javascript

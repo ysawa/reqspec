@@ -45,6 +45,7 @@ Spork.prefork do
 
     # To test features using authentication
     %w(controller decorator view).each do |type|
+      config.include Devise::TestHelpers, type: type
     end
 
     %w(decorator request view).each do |type|

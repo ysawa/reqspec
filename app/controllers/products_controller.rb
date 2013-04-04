@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 class ProductsController < ApplicationController
-  respond_to :html, :json
+  respond_to :json
 
   before_filter :find_product, only: [:destroy, :edit, :show, :update]
 
