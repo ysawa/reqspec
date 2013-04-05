@@ -23,6 +23,12 @@
 
   App.rootRoute = Routes.root_path()
 
+  App.on "initialize:before", (options) ->
+    @currentUser = App.request "set:current:user", gon.current_user
+
+  App.reqres.addHandler "get:current:user", ->
+    App.currentUser
+
   App.addRegions
     headerRegion: "#header-region"
     mainRegion: "#main-region"
