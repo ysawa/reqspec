@@ -12,7 +12,7 @@
         { name: "Projects", url: Routes.root_path(), active: false }
         { name: "Products", url: Routes.products_path(), active: false }
         { name: "Requirements", url: Routes.root_path(), active: false }
-        { name: "Specs", url: Routes.root_path(), active: false }
+        { name: "Logout", url: Routes.destroy_user_session_path(), active: false, options: { 'data-method': 'delete', external: true } }
       ]
 
   App.reqres.addHandler "header:entities", ->

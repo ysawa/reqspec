@@ -61,4 +61,6 @@ Reqspec::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  # Server infomation for email tests
+  config.action_mailer.default_url_options = { host: 'reqspec.info', protocol: 'http' }
 end

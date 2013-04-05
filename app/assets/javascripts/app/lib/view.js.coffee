@@ -10,4 +10,9 @@
 
         url = "#" + url unless options.external
 
-        "<a href='#{url}'>#{escape(name)}</a>"
+        delete(options.external)
+        attributes = ''
+        _.each options, (value, key) ->
+          attributes += " #{key}=\"#{value}\""
+
+        "<a href='#{url}'#{attributes}>#{escape(name)}</a>"
