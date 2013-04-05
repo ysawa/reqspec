@@ -32,6 +32,7 @@ gem 'haml'
 
 gem 'rabl'
 gem 'oj'
+gem 'gon'
 
 # Optional support for hamljs templates
 gem 'ruby-haml-js'
