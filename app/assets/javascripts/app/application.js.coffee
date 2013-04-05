@@ -7,7 +7,6 @@
 #= require backbone.wreqr
 #= require backbone.marionette
 #= require backbone.paginator
-#= require twitter/bootstrap
 #= require js-routes
 #= require hamlcoffee
 #= require_tree ./config
