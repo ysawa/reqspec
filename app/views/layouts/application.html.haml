@@ -4,6 +4,7 @@
     = render 'shared/head'
   %body.welcome
     %section.container
+      = bootstrap_flash
       = yield
     = javascript_include_tag "application"
     - if content_for? :after_javascript
