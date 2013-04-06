@@ -1,0 +1,6 @@
+%ul.nav.pull-right#sub_nav
+  %li.dropdown
+    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+      Dropdown
+      %b.caret
+    %ul.dropdown-menu

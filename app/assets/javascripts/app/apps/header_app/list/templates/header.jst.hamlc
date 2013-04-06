@@ -1,11 +1,1 @@
-.navbar.navbar-top.navbar-static-top
-  .navbar-inner
-    .container
-      %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.brand(href='/#') Reqspec
-      .container.nav-collapse
-        %ul.nav
-
+%ul.nav

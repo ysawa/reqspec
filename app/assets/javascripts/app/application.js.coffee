@@ -30,7 +30,8 @@
     App.currentUser
 
   App.addRegions
-    headerRegion: "#header-region"
+    mainNavRegion: "#main-nav-region"
+    subNavRegion: "#sub-nav-region"
     mainRegion: "#main-region"
     footerRegion: "#footer-region"
 

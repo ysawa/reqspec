@@ -11,4 +11,4 @@
   class List.Header extends App.Views.CompositeView
     template: "header_app/list/templates/header"
     itemView: List.Item
-    itemViewContainer: "ul"
+    itemViewContainer: ".nav"
