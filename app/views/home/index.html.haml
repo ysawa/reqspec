@@ -6,7 +6,11 @@
     %footer#footer-region
 
 = content_for :after_javascript do
-  :javascript
-    $(function () {
-      Reqspec.start();
-    })
+  :coffee
+    $ ->
+      Reqspec.start
+        server:
+          env: #{Rails.env.to_json}
+          flash:
+            notice: #{flash[:notice].to_json}
+            error: #{flash[:error].to_json}

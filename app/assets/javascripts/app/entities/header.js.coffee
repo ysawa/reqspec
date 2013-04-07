@@ -9,7 +9,6 @@
     getMain: ->
       new Entities.HeaderCollection [
         { name: "Products", url: Routes.products_path(), active: false }
-        { name: "Requirements", url: Routes.root_path(), active: false }
       ]
     getSub: ->
       new Entities.HeaderCollection [

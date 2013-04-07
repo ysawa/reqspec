@@ -1,3 +1,5 @@
+%h1
+  Products
 %table.table.table-striped.table-bordered
   %thead
     %tr
