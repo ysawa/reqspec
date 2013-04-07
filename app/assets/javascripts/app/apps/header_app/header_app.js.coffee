@@ -6,10 +6,10 @@
       HeaderApp.Layout.Controller.layout()
     list: ->
       HeaderApp.List.Controller.list()
-    dropDown: ->
-      HeaderApp.DropDown.Controller.dropDown()
+    dropdown: ->
+      HeaderApp.Dropdown.Controller.dropdown()
 
   HeaderApp.on "start", ->
     API.layout()
     API.list()
-    API.dropDown()
+    API.dropdown()

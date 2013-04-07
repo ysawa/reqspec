@@ -16,3 +16,6 @@
           attributes += " #{key}=\"#{value}\""
 
         "<a href='#{url}'#{attributes}>#{escape(name)}</a>"
+
+      currentUser:
+        App.request("get:current:user").toJSON()

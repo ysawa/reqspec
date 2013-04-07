@@ -1,0 +1,4 @@
+%ul.nav.pull-right
+  %li.dropdown
+    %a.dropdown-toggle#header-dropdown-toggle{"data-toggle" => "dropdown", href: "#", 'data-target': '#header-dropdown-menu-list', role: 'button'}
+    #header-dropdown-menu
