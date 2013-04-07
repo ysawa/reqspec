@@ -6,12 +6,18 @@
     model: Entities.Header
 
   API =
-    getHeader: ->
+    getMain: ->
       new Entities.HeaderCollection [
         { name: "Products", url: Routes.products_path(), active: false }
         { name: "Requirements", url: Routes.root_path(), active: false }
+      ]
+    getSub: ->
+      new Entities.HeaderCollection [
         { name: "Logout", url: Routes.destroy_user_session_path(), active: false, options: { 'data-method': 'delete', external: true } }
       ]
 
-  App.reqres.addHandler "header:entities", ->
-    API.getHeader()
+  App.reqres.addHandler "header:entities:main", ->
+    API.getMain()
+
+  App.reqres.addHandler "header:entities:sub", ->
+    API.getSub()

@@ -3,10 +3,10 @@
   List.Controller =
 
     list: ->
-      links = App.request "header:entities"
+      links = App.request "header:entities:main"
 
       headerView = @getHeaderView links
-      App.mainNavRegion.show headerView
+      App.request('header:layout').mainRegion.show headerView
 
     getHeaderView: (links) ->
       new List.Header

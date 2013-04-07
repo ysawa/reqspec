@@ -3,10 +3,10 @@
   DropDown.Controller =
 
     dropDown: ->
-      links = App.request "header:entities"
+      links = App.request "header:entities:sub"
 
       headerView = @getHeaderView links
-      App.subNavRegion.show headerView
+      App.request('header:layout').subRegion.show headerView
 
     getHeaderView: (links) ->
       new DropDown.Header
