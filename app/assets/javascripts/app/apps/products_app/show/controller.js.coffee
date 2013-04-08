@@ -9,5 +9,11 @@
 
         App.mainRegion.show @layout
 
+        @showProductView(product)
+
     getLayoutView: ->
       new Show.Layout
+
+    showProductView: (product) ->
+      view = new Show.Product(model: product)
+      @layout.productRegion.show view

@@ -4,8 +4,7 @@
     template: "products_app/show/templates/layout"
 
     regions:
-      paginationRegion: "#pagination-region"
-      productsRegion: "#products-region"
+      productRegion: "#product-region"
 
   class Show.Product extends App.Views.ItemView
     template: "products_app/show/templates/_product"
